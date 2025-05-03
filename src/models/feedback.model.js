@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const FeedbackSchema = new mongoose.Schema({
     phone: String,
     message: String,
+    stars: Number,
     reply: String
 }, { timestamps: true });
 
