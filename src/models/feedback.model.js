@@ -4,7 +4,8 @@ const FeedbackSchema = new mongoose.Schema({
     phone: String,
     message: String,
     stars: Number,
-    reply: String
+    reply: String,
+    bill_id: String
 }, { timestamps: true });
 
 module.exports = mongoose.model('Feedback', FeedbackSchema);

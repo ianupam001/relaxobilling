@@ -4,6 +4,7 @@ exports.submitFeedback = async (req, res) => {
     try {
         const feedback = new Feedback(req.body);
         await feedback.save();
+        console.log(req.body);
         res.status(201).json(feedback);
     } catch (err) {
         res.status(500).json({ error: err.message });

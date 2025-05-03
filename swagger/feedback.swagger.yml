@@ -96,10 +96,18 @@ components:
       required:
         - phone
         - message
+        - stars
+        - bill_id
       properties:
         phone:
           type: string
         message:
+          type: string
+        stars:
+          type: integer
+          minimum: 1
+          maximum: 5
+        bill_id:
           type: string
 
     Feedback:
