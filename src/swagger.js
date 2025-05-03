@@ -3,8 +3,9 @@ const path = require('path');
 require('dotenv').config();
 
 const isProd = process.env.NODE_ENV === 'prod';
+console.log('Environment:', isProd ? 'Production' : 'Development');
 const domainUrl = process.env.DOMAIN_URL;
-
+console.log('Domain URL:', domainUrl);
 const authSwagger = YAML.load(path.join(__dirname, '../swagger/auth.swagger.yml'));
 const billSwagger = YAML.load(path.join(__dirname, '../swagger/bill.swagger.yml'));
 const feedbackSwagger = YAML.load(path.join(__dirname, '../swagger/feedback.swagger.yml'));
